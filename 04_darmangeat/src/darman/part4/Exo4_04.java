@@ -29,5 +29,3 @@ public class Exo4_04 {
 	}
 
 }
-
-// Reste a print le prix 
