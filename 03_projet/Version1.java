@@ -8,7 +8,7 @@ public class Version1 {
         String chevaux[] = new String[3];
         char rep;
 
-        do {
+        do { 
             //SAISIE
             System.out.print("Nom du cavalier\t\t: ");
             nom = sc.nextLine();
