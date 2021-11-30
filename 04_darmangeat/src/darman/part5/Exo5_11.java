@@ -10,7 +10,7 @@ public class Exo5_11 {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Entrez le nombre de chevaux partants : ");
 		totalChevaux = sc.nextInt();
-		System.out.print("Entrez le nombre de chevaux jouÃ©s : ");
+		System.out.print("Entrez le nombre de chevaux joués : ");
 		chevauxParier = sc.nextInt();
 		sc.close();
 		for(i = 1; i < chevauxParier; i++) {
@@ -18,7 +18,7 @@ public class Exo5_11 {
 			desordreChance = desordreChance * i;
 		}
 		System.out.println("Dans l'ordre, une chance sur " + ordreChance);
-		System.out.println("Dans le dÃ©sordre, une chance sur " + ordreChance / desordreChance);
+		System.out.println("Dans le désordre, une chance sur " + ordreChance / desordreChance);
 		
 	}
 
