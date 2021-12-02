@@ -1,34 +1,43 @@
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class Item3 {
 
 	public static void main(String[] args) {
 		long ss = 255067511305279L;
-	//	long nir = 97 - ((SS) % 97);
 		
-		verifieNoSS(ss);
+		
+		if(verifieNoSS(ss)) {
+			System.out.println("Valide");
+		}
+		else {
+			System.out.println("Invalide");
+		}
 
 	}
 	
-	static void verifieNoSS(long noSS) {
+	static boolean verifieNoSS(long noSS) {
 		String nombre = Long.toString((long) noSS);
 		StringBuffer cle = new StringBuffer();
 		for(int i = 13; i < nombre.length(); i++) {
 			cle.append(nombre.charAt(i));
 		}
-		System.out.println(cle);
 		
 		StringBuffer ss = new StringBuffer();
 		for(int i = 0; i < 13; i++) {
 			ss.append(nombre.charAt(i));
 		}
-		System.out.println(ss);
 		
-		int ssCal = Integer.parseInt(ss.toString());
-		int cleCal = Integer.parseInt(cle.toString());
-		
-		System.out.println(ssCal + " + " + cleCal + " = " + (ssCal+cleCal));
+		String ssString = ss.toString();
+		long ssLong = Long.parseLong(ssString);
+		long nir = 97 - ((ssLong) % 97);
+		String cleString = cle.toString();
+		long cleLong = Long.parseLong(cleString);
+		if(nir == cleLong) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 }
