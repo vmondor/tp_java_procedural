@@ -5,11 +5,12 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-import fr.afpa.math.Math;
+import fr.afpa.math.MathBean;
 
-public class CalculFactor {
+public class CalculFactorBean {
 
 	public static void main(String[] args) throws IllegalArgumentException {
+		MathBean mathBean = new MathBean();
 		boolean flag = true;
 		String str;
 		do {
@@ -19,7 +20,7 @@ public class CalculFactor {
 				
 				try {
 					long number = Long.parseLong(str);
-					System.out.println("Factorielle : " + Math.factorielle(number));
+					System.out.println("Factorielle : " + mathBean.factorielle(number));
 					flag = true;
 				} catch (NumberFormatException e) {
 					JOptionPane.showMessageDialog(null, "Merci de rentrer un nombre");
@@ -42,7 +43,7 @@ public class CalculFactor {
 		System.out.print("Entrez un nombre (Big) : ");
 		BigInteger chiffre = new BigInteger(sc.nextLine());
 		try {
-			System.out.println(Math.factorielleBig(chiffre));
+			System.out.println(mathBean.factorielleBig(chiffre));
 		} catch(NumberFormatException e) {
 			JOptionPane.showMessageDialog(null, "Merci de rentrer un nombre");
 		} catch(StackOverflowError e) {
