@@ -1,18 +1,46 @@
 package fr.afpa.math;
 
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.RoundingMode;
 
 import javax.swing.JOptionPane;
 
-public class Math {
+public class MathBean {
 
 	static final BigDecimal TAUX_EURO_DOLLAR = new BigDecimal("1.18674");
 	static final BigDecimal TAUX_DOLLAR_EURO = new BigDecimal("0.88");
 
 	public static void main(String[] args) {
-//		factorielleBig(new BigInteger("9080"));
+		MathBean mb = new MathBean();
+		
+		//TODO -----> Test Factorielle de 0;
+		if(mb.factorielle(0) == 1) {
+			System.out.println("Test factorielle(0) OK \t: La factorielle de zero vaut 1");
+		} else {
+			System.err.println("Test factorielle(0) ERR \t: La factorielle de zero vaut 1");
+		}
+		//TODO -----> Test Factorielle de -1;
+		try {
+			mb.factorielle(-1);
+			System.err.println("Test factorielle(-1) ERR : Doit generer une erreur StackOverlowError");
+		} catch(StackOverflowError e) {
+			System.out.println("Test factorielle(-1) OK : La factorielle genere une erreur StackOverlowError");
+		}
+		//TODO -----> Test Factorielle de 3;
+		if(mb.factorielle(3) == 6) {
+			System.out.println("Test factorielle(3) OK \t: La factorielle de trois vaut 6");
+		} else {
+			System.err.println("Test factorielle(3) ERR \t: La factorielle de trois vaut 6");
+		}
+		//TODO -----> Test Factorielle de 45;
+		try {
+			mb.factorielle(45);
+			System.err.println("Test factorielle(45) ERR : Doit generer une erreur IllegalArgumentException");
+		} catch(IllegalArgumentException e) {
+			System.out.println("Test factorielle(45) OK : La factorielle genere une erreur IllegalArgumentException");
+		}
 
 	}
 
@@ -38,7 +66,7 @@ public class Math {
 		return res;
 	}
 	
-	public static long factorielle(long number) throws IllegalArgumentException {
+	public long factorielle(long number) throws IllegalArgumentException {
 		if(number == 1 | number == 0) {
 			return 1;
 		}
@@ -57,7 +85,7 @@ public class Math {
 		return number.multiply(factorielleBigRes(number.subtract(new BigInteger("1"))));
 	}
 	
-	public static BigInteger factorielleBig(BigInteger number) {
+	public BigInteger factorielleBig(BigInteger number) {
 		
 		BigInteger i = new BigInteger("1");
 		BigInteger res = new BigInteger("1");
