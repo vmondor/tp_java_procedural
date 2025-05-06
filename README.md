@@ -2,8 +2,8 @@
 
 ## 📌 Description
 
-Ce dépôt contient un ensemble de **mini-projets et travaux pratiques (TP)** conçus pour apprendre et consolider les bases du langage **Java** dans une approche **procédurale** (sans programmation orientée objet).  
-L'objectif principal est de se familiariser avec la syntaxe, la logique de programmation, les structures de contrôle, les fonctions, les tableaux, les entrées/sorties et d'autres concepts fondamentaux du langage Java.
+Ce dépôt contient un ensemble de **mini-projets et travaux pratiques (TP)** conçus pour apprendre et consolider les bases du langage **Java** dans une approche **procédurale**.
+L'objectif principal est de se familiariser avec la syntaxe, la logique de programmation, les fonctions, les tableaux et d'autres concepts fondamentaux du langage Java.
 
 ## 🛠️ Environnement de développement
 
@@ -12,14 +12,7 @@ L'objectif principal est de se familiariser avec la syntaxe, la logique de progr
 
 ## 📂 Contenu
 
-Le projet est composé de plusieurs TP classés par thème ou notion. Chaque TP aborde une problématique ou un concept clé à maîtriser pour progresser efficacement dans l'apprentissage du Java procédural.
-
-Par exemple :
-- TP sur les conditions et boucles
-- TP sur les fonctions et procédures
-- TP sur les tableaux à une ou plusieurs dimensions
-- TP sur la gestion des chaînes de caractères
-- TP sur la lecture/écriture dans des fichiers (si applicable)
+Le projet est composé de plusieurs TP. Chaque TP aborde une problématique ou un concept à maîtriser pour progresser dans l'apprentissage du Java procédural.
 
 ## 🎯 Objectif pédagogique
 
@@ -29,8 +22,4 @@ Par exemple :
 
 ## 📎 Remarques
 
-Ce projet a été réalisé dans un cadre d’**auto-formation**. Il peut servir de support à d'autres personnes souhaitant débuter Java par une approche procédurale avant de passer à la programmation orientée objet (POO).
-
----
-
-**N'hésite pas à explorer les différents fichiers pour voir les solutions proposées à chaque TP !**
+Ce projet a été réalisé dans un cadre d’**auto-formation**.
